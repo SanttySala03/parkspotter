@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>ParkSpotter</title>
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/PS_favicon.png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos_lp.css') }}">
+</head>
+
+<body>
+
+    <header class="hero">
+        <nav class="nav container">
+            <div class="nav_logo">
+                <h2 class="nav__title"> ParkSpotter</h2>
+            </div>
+
+            <ul class="nav_link nav_link--menu">
+                <li class="nav__items"><a href="#" class="nav__links">Inicio</a></li>
+                <li class="nav__items"><a href="#" class="nav__links">¿Cómo funciona?</a></li>
+                <li class="nav__items"><a href="#" class="nav__links">Beneficios</a></li>
+                <li class="nav__items"><a href="#" class="nav__links">App</a></li>
+                <li class="nav__items"><a href="#" class="nav__links">Tarifas</a></li>
+                <a href="{{ url_for('login') }}" class="nav__links">Iniciar sesión</a>
+
+                </li>
+
+                <li class="nav__items"><a href="#" class="nav__links">Contacto</a></li>
+
+                <img src="{{ url_for('static', filename='images/close.svg') }}" alt="" class="nav_close">
+            </ul>
+
+            <div class="nav_menu">
+                <img src="{{ url_for('static', filename='images/menu.svg') }}" alt="" class="nav_img">
+            </div>
+        </nav>
+
+        <section class="hero__container container">
+            <h1 class="hero_title">Encuentra parqueadero en segundos. Reserva, paga y conduce sin estrés.</h1>
+            <p class="hero__paragraph">
+                Con la app de ParkSpotter podrás reservar parqueaderos o publicar un parqueadero que no estés usando para obtener ingresos.
+            </p>
+            <a href="{{ url_for('login') }}" class="cta">¡Empecemos!</a>
+        </section>
+    </header>
+
+    <main>
+
+        <!-- SECCIÓN ABOUT -->
+        <section class="container about">
+            <h2 class="subtitle">¿Qué te ofrece ParkSpotter?</h2>
+            <p class="about__paragraph">
+                Optimización total de tu experiencia al buscar, reservar y gestionar parqueaderos en Bogotá.
+            </p>
+
+            <div class="about__main">
+
+                <article class="about__icons">
+                    <ion-icon name="pin-outline"></ion-icon>
+                    <h3 class="about__title">Geolocalización en tiempo real</h3>
+                    <p class="about__paragraph">
+                        Encuentra parqueaderos disponibles cerca de ti con actualizaciones instantáneas.
+                    </p>
+                </article>
+
+                <article class="about__icons">
+                    <ion-icon name="calendar-clear-outline"></ion-icon>
+                    <h3 class="about__title">Reservas rápidas y seguras</h3>
+                    <p class="about__paragraph">
+                        Aparta un espacio antes de llegar y evita sorpresas.
+                    </p>
+                </article>
+
+                <article class="about__icons">
+                    <ion-icon name="shield-half-outline"></ion-icon>
+                    <h3 class="about__title">Pagos digitales protegidos</h3>
+                    <p class="about__paragraph">
+                        Realiza transacciones seguras mediante pasarelas reconocidas.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- SECCIÓN KNOWLEDGE -->
+        <section class="knowledge">
+            <div class="knowledge__container container">
+                <div class="knowledge__texts">
+                    <h2 class="subtitle">Encuentra parqueadero en segundos.</h2>
+                    <p class="knowledge__paragraph">
+                        La forma más rápida y segura de estacionar en Bogotá.
+                    </p>
+                    <a href="{{ url_for('login') }}" class="cta">¡Prueba la app!</a>
+                </div>
+
+                <figure class="knowledge__picture">
+                    <img src="{{ url_for('static', filename='images/prueba1.jpg') }}" alt="" class="knowledge__img">
+                </figure>
+            </div>
+        </section>
+
+        <!-- SECCIÓN PRECIOS -->
+        <section class="price">
+            <h2 class="subtitle">Tarifas claras y sin sorpresas</h2>
+
+            <div class="price__table">
+
+                <div class="price__element">
+                    <h3 class="plan__price">Tarifa por hora</h3>
+                    <div class="price__items">
+                        <p class="price__features">Perfecto para zonas comerciales</p>
+                    </div>
+                </div>
+
+                <div class="price__element price__element--best">
+                    <p class="price__name">🔥 ¡Mejor opción! 🔥</p>
+                    <h3 class="plan__price">Tarifa por día</h3>
+                    <div class="price__items">
+                        <p class="price__features">Reservas anticipadas aseguradas</p>
+                    </div>
+                </div>
+
+                <div class="price__element">
+                    <h3 class="plan__price">Plan propietario</h3>
+                    <div class="price__items">
+                        <p class="price__features">Publica tu garaje gratis</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- IonIcons -->
+    <script type="module"
+        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule
+        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

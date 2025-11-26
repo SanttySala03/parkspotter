@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Verificación</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/estilos_verificacion.css') }}">
+</head>
+
+<body>
+
+<div class="card">
+    <h2>Antes de continuar, completa tu información</h2>
+
+    <label>Tipo de usuario</label>
+    <select id="tipo">
+        <option value="conductor">Conductor</option>
+        <option value="propietario">Propietario</option>
+    </select>
+
+    <label>Número de documento</label>
+    <input id="documento" type="text" placeholder="Cédula">
+
+    <label>Teléfono</label>
+    <input id="telefono" type="text" placeholder="Número de contacto">
+
+    <label class="check">
+        <input type="checkbox" id="terminos">
+        Acepto la política de datos y los términos de uso
+    </label>
+
+    <button id="btn-save">Guardar información</button>
+</div>
+
+<script src="{{ url_for('static', filename='js/verificacion.js') }}"></script>
+
+</body>
+</html>

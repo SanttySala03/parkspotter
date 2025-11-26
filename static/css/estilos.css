@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,800;1,800&display=swap');
+
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* BODY */
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav__title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.hero-login {
+    width: 100%;
+    padding-top: 20px;  /* misma separación vertical */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+/* Asegurar que nav en login se vea igual */
+.hero-login .nav {
+    display: flex;
+    align-items: center;
+}
+
+.hero-login .nav_logo .nav__title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('../images/parkinglogin.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(6px);
+    z-index: -1;
+}
+
+/* CONTAINER */
+.container {
+    width: 800px;
+    height: 500px;
+    display: flex;
+    position: relative;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* FORMULARIO */
+.container__form {
+    width: 50%;
+    position: relative;
+}
+
+.container__form form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease-in;
+}
+
+.container__form h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.social-networks {
+    font-size: 18px;
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.social-networks ion-icon {
+    border: 1px solid #C9CCCB;
+    font-size: 18px;
+    border-radius: 6px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.container__form span {
+    font: 12px;
+    margin-bottom: 15px;
+}
+
+.container-input {
+    width: 300px;
+    height: 40px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 0 15px;
+    background-color: #EEEEEE;
+}
+
+.container-input input {
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+}
+
+.container__form a {
+    color: black;
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+.container__form button,
+.welcome-register button,
+.welcome-sing-in button {
+    width: 170px;
+    height: 45px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    background-color: #3AB397;
+    color: white;
+}
+
+/* ANIMATION FORM */
+.sign-in {
+    transform: translateX(0%);
+    transition: 0.5s ease-in-out;
+}
+
+.register {
+    transform: translateX(0%);
+    transition: 0.5s ease-in-out;
+}
+
+.container.toggle .sign-in {
+    transform: translateX(0%);
+    overflow: hidden;
+}
+
+.container.toggle .register {
+    transform: translateX(0%);
+    overflow: hidden;
+}
+
+/* WELCOME PANEL */
+.container-welcome {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transform: translateX(100%);
+    background-color: #3AB397;
+    transition: transform 0.5s ease-in-out, border-radius 0.5s ease-in-out;
+    overflow: hidden;
+    border-radius: 50% 0 0 50%;
+}
+
+.container.toggle .container-welcome {
+    transform: translateX(0);
+    border-radius: 0 50% 50% 0;
+    background-color: #3AA8AD;
+}
+
+.container-welcome .welcome {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0 50px;
+    color: white;
+    transition: transform 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+.welcome-sing-in {
+    transform: translateX(100%);
+}
+
+.container-welcome h3 {
+    font-size: 40px;
+}
+
+.container-welcome p {
+    font-size: 14px;
+    text-align: center;
+}
+
+.container-welcome .button {
+    border: 2px solid white;
+    background-color: transparent;
+}
+
+.container.toggle .welcome-sing-in {
+    transform: translateX(0);
+}
+
+.container.toggle .welcome-register {
+    transform: translateX(-100%);
+}

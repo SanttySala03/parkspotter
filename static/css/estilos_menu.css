@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:ital,wght@0,900;1,900&display=swap');
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Que la pantalla se comporte como app en columna */
+html, body {
+    height: 100%;
+    font-family: 'Zalando Sans Expanded', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    font-family: 'Zalando Sans Expanded', sans-serif;
+}
+
+/* Header superior */
+.header {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 12px 16px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-family: 'Zalando Sans Expanded', sans-serif;
+}
+
+.header h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* Contenedor del mapa ocupa todo el espacio central */
+.map-container {
+    flex: 1;              /* Esto hace que crezca para llenar el espacio */
+    width: 100%;
+    overflow: hidden;
+}
+
+/* El mapa en sí mismo debe tener altura explícita */
+#map {
+    width: 100%;
+    height: 100%;         /* Llena el contenedor */
+}
+
+/* Barra de navegación inferior */
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px 0;
+    background-color: #ffffff;
+    border-top: 1px solid #ddd;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.05);
+}
+
+.bottom-nav .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.75rem;
+    color: #333;
+    flex: 1;
+}
+
+.bottom-nav img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 4px;
+}
+
+/* Opcional: resaltar el ítem "Inicio" como activo */
+.bottom-nav .item:first-child p {
+    font-weight: 600;
+    color: #4CAF50;
+}
